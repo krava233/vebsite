@@ -285,13 +285,14 @@ nav .channel-list a:visited {
   </a>      
         <p>© 2023 Моя Інформаційна Сторінка</p>
     </footer>
- <script>
+
+  <script>
     document.addEventListener("DOMContentLoaded", function() {
       var socialIcons = document.getElementById("socialIcons");
 
       window.addEventListener("scroll", function() {
-        var windowHeight = window.innerHeight;
         var scrollY = window.scrollY;
+        var windowHeight = window.innerHeight;
         var contentHeight = document.querySelector(".content").offsetHeight;
 
         if (scrollY + windowHeight >= contentHeight) {
