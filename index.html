@@ -81,13 +81,37 @@ section {
     border: 2px solid #333;
     border-radius: 10px; /* Задайте радіус заокруглення, який вам подобається */
 }
-    a:link {
-      color: white; /* Ваш бажаний колір (білий у цьому випадку) */
+ :root {
+      --link-color-light: black; /* Колір для світлої теми */
+      --link-color-dark: white; /* Колір для темної теми */
     }
 
-    /* Селектор для відвіданих гіперпосилань */
-    a:visited {
-      color: white; /* Колір для відвіданих гіперпосилань (білий у цьому випадку) */
+    /* Селектор для гіперпосилань на світлій темі */
+    @media (prefers-color-scheme: light) {
+      a:link {
+        color: var(--link-color-light);
+      }
+    }
+
+    /* Селектор для гіперпосилань на темній темі */
+    @media (prefers-color-scheme: dark) {
+      a:link {
+        color: var(--link-color-dark);
+      }
+    }
+
+    /* Селектор для відвіданих гіперпосилань (світла тема) */
+    @media (prefers-color-scheme: light) {
+      a:visited {
+        color: var(--link-color-light);
+      }
+    }
+
+    /* Селектор для відвіданих гіперпосилань (темна тема) */
+    @media (prefers-color-scheme: dark) {
+      a:visited {
+        color: var(--link-color-dark);
+      }
     }
     </style>
     <title>Моя Інформаційна Сторінка</title>
