@@ -111,7 +111,7 @@ nav .channel-list a {
 nav .channel-list a:visited {
     color: white;
 }
-       body {
+         body {
       margin: 0;
       padding: 0;
       position: relative;
@@ -123,13 +123,14 @@ nav .channel-list a:visited {
     }
 
     .social-icons {
-      position: absolute;
-      bottom: 20px; /* Змініть це значення відповідно до ваших потреб */
+      position: fixed;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
       background-color: #f1f1f1;
       padding: 10px;
+      opacity: 0; /* Робіть значки невидимими за замовчуванням */
+      transition: opacity 0.3s ease-in-out; /* Анімація для плавного з'явлення/зникнення */
     }
 
     .social-icons a {
@@ -284,7 +285,24 @@ nav .channel-list a:visited {
   </a>      
         <p>© 2023 Моя Інформаційна Сторінка</p>
     </footer>
+ <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var socialIcons = document.getElementById("socialIcons");
 
+      window.addEventListener("scroll", function() {
+        var windowHeight = window.innerHeight;
+        var scrollY = window.scrollY;
+        var contentHeight = document.querySelector(".content").offsetHeight;
+
+        if (scrollY + windowHeight >= contentHeight) {
+          socialIcons.style.opacity = "1"; // Робіть значки видимими
+        } else {
+          socialIcons.style.opacity = "0"; // Робіть значки невидимими
+        }
+      });
+    });
+  </script>
+    
     <!-- AJAX-запит для отримання вмісту текстового файлу -->
     <div id="text-container"></div>
     <script>
