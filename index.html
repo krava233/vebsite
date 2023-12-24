@@ -206,22 +206,18 @@ nav .channel-list a:visited {
 </section>
 
 <script>
-  // Отримати всі плейлисти
-  const playlists = document.querySelectorAll('iframe');
+  const playlists = document.querySelectorAll('.playlist');
 
-  // Додати обробник подій для всіх плейлистів
-  playlists.forEach((playlist, index) => {
-    playlist.addEventListener("load", () => {
-      // Зупинити відтворення інших плейлистів
-      playlists.forEach((otherPlaylist, otherIndex) => {
-        if (otherIndex !== index) {
+  playlists.forEach(playlist => {
+    playlist.addEventListener('load', () => {
+      playlists.forEach(otherPlaylist => {
+        if (otherPlaylist !== playlist) {
           otherPlaylist.contentWindow.postMessage('{"method":"pause"}', 'https://open.spotify.com');
         }
       });
     });
   });
 </script>
-
 
 
        <section id="favoritechannel">
