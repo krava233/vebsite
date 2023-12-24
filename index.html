@@ -172,6 +172,23 @@ nav .channel-list a:visited {
             </tr>
             <!-- Додайте інші альбоми за потребою -->
         </tbody></table>
+       
+<script>
+  // Отримати посилання на iframe
+  const playlist1 = document.getElementById("playlist1");
+  const playlist2 = document.getElementById("playlist2");
+
+  // Додати обробник подій для другого плейлисту
+  playlist2.addEventListener("srcdoc", () => {
+    // Зупинити відтворення першого плейлисту
+    playlist1.contentWindow.postMessage('{"method":"pause"}', 'https://open.spotify.com');
+  });
+
+  // Аналогічно, додайте обробник подій для першого плейлисту, якщо потрібно
+
+</script>
+
+ 
     </section>
 
        <section id="favoritechannel">
