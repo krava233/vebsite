@@ -9,6 +9,12 @@
 
     <style>
         /* Ваші стилі CSS тут */
+
+        :root {
+            --light-link-color: black;   /* Колір посилань для світлої теми */
+            --dark-link-color: white;    /* Колір посилань для темної теми */
+        }
+
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -18,13 +24,10 @@
 
         section {
             background-color: rgba(255, 255, 255, 0.8);
-            /* Прозорий білий фон */
             padding: 20px;
             margin: 20px;
             border-radius: 70px;
-            /* Опціонально: закруглені кути */
             overflow: hidden;
-            /* Забезпечення правильного закруглення кутів */
         }
 
         header {
@@ -34,8 +37,6 @@
             text-align: center;
         }
 
-        /* Додайте інші стилі тут */
-
         footer {
             background-color: #333;
             color: #fff;
@@ -44,15 +45,12 @@
             width: 100%;
         }
 
-        /* Стилі для таблиці та її елементів */
         table.favorite-table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
             border-radius: 10px;
-            /* Закруглені кути */
             overflow: hidden;
-            /* Забезпечення правильного закруглення кутів */
         }
 
         table.favorite-table th,
@@ -71,58 +69,39 @@
             background-color: #f2f2f2;
         }
 
-        /* Стилі для блоку фону */
         .background-block {
             background-image: url('https://source.unsplash.com/random');
-            /* Замініть 'шлях_до_фотографії.jpg' на шлях до вашої фотографії */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             height: 100vh;
-            /* Забезпечте повну висоту вікна */
             width: 100%;
             position: fixed;
             top: 0;
             left: 0;
             z-index: -1;
-            /* Розміщення блоку за контентом */
         }
 
-        /* Стилі для фото */
         #about img {
             display: block;
             margin: auto;
             border: 2px solid #333;
             border-radius: 10px;
-            /* Задайте радіус заокруглення, який вам подобається */
         }
 
-    :root {
-    --light-link-color: black;   /* Колір посилань для світлої теми */
-    --dark-link-color: white;    /* Колір посилань для темної теми */
-}
-
-        /* Селектор для гіперпосилань в блоку nav */
         nav a {
-            color: var(--link-color-dark);
+            color: var(--light-link-color);
         }
 
-        /* Селектор для відвіданих гіперпосилань в блоку nav */
-        nav a:visited {
-            color: var(--link-color-dark);
-        }
-     /* Стилі для гіперпосилань в блоку #favoritechannel (світла тема) */
-        @media (prefers-color-scheme: light) {
-#favoritechannel a {
-    color: var(--dark-link-color); /* Колір гіперпосилань при світлій темі */
-}
+        @media (prefers-color-scheme: dark) {
+            nav a {
+                color: var(--dark-link-color);
+            }
 
-/* Стилі для гіперпосилань в блоку #favoritechannel (темна тема) */
-@media (prefers-color-scheme: dark) {
-    #favoritechannel a {
-        color: var(--light-link-color); /* Колір гіперпосилань при темній темі */
-    }
-}
+            #favoritechannel a {
+                color: var(--light-link-color);
+            }
+        }
 
     </style>
     <title>Моя Інформаційна Сторінка</title>
@@ -130,6 +109,7 @@
 </head>
 
 <body>
+
     <header>
         <h1>Вітаю на моїй інформаційній сторінці!</h1>
         <nav class="special-nav">
