@@ -113,13 +113,17 @@ section {
         color: var(--link-color-light);
       }
     }
+       /* Специфічний блок з іншим коліром гіперпосилань */
+    .special-block a {
+      color: light; /* Колір гіперпосилань в специфічному блоку */
+    }
     </style>
     <title>Моя Інформаційна Сторінка</title>
 <style type="text/css" id="operaUserStyle"></style></head>
 <body>
     <header>
         <h1>Вітаю на моїй інформаційній сторінці!</h1>
-        <nav>
+        <nav class="special-nav">
             <ul>
                 <li><a href="#about">Про мене</a></li>
                 <li><a href="#interests">Мої інтереси</a></li>
