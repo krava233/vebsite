@@ -97,13 +97,10 @@
             /* Задайте радіус заокруглення, який вам подобається */
         }
 
-        :root {
-            --link-color-light: black;
-            /* Колір для світлої теми */
-            --link-color-dark: white;
-            /* Колір для темної теми */
-            --link-color-lightdark: black; /* Колір для світлої теми (зміна для темної теми) */
-        }
+    :root {
+    --light-link-color: black;   /* Колір посилань для світлої теми */
+    --dark-link-color: white;    /* Колір посилань для темної теми */
+}
 
         /* Селектор для гіперпосилань в блоку nav */
         nav a {
@@ -114,15 +111,15 @@
         nav a:visited {
             color: var(--link-color-dark);
         }
-      /* Стилі для гіперпосилань в блоку favoritechannel */
+     /* Стилі для гіперпосилань в блоку #favoritechannel (світла тема) */
 #favoritechannel a {
-    color: var(--link-color-dark); /* Загальний колір гіперпосилань (світла тема) */
+    color: var(--dark-link-color); /* Колір гіперпосилань при світлій темі */
 }
 
-/* Стилі для гіперпосилань в блоку favoritechannel (темна тема) */
+/* Стилі для гіперпосилань в блоку #favoritechannel (темна тема) */
 @media (prefers-color-scheme: dark) {
     #favoritechannel a {
-        color: var(--link-color-lightdark); /* Колір гіперпосилань на темній темі */
+        color: var(--light-link-color); /* Колір гіперпосилань при темній темі */
     }
 }
 
