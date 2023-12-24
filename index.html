@@ -153,6 +153,7 @@ nav .channel-list a:visited {
 </head>
 <body>
 
+
 <section id="favorite">
   <h2>Мої плейлисти Spotify</h2>
   <table class="favorite-table">
@@ -171,25 +172,56 @@ nav .channel-list a:visited {
           </div>
         </td>
       </tr>
+      <tr>
+        <td>
+          <div style="left: 0; width: 100%; height: 80px; position: relative;">
+            <iframe id="playlist3" src="https://open.spotify.com/embed/playlist/0dhXftDsBIv8b4Jsqg2rMm?utm_source=oembed" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture;"></iframe>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div style="left: 0; width: 100%; height: 80px; position: relative;">
+            <iframe id="playlist4" src="https://open.spotify.com/embed/playlist/7H1VLX5SkFmgb4hdzRtrLn?utm_source=oembed" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture;"></iframe>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div style="left: 0; width: 100%; height: 80px; position: relative;">
+            <iframe id="playlist5" src="https://open.spotify.com/embed/playlist/04Yz65eyDrShoY6hBDcVxa?utm_source=oembed" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture;"></iframe>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div style="left: 0; width: 100%; height: 80px; position: relative;">
+            <iframe id="playlist6" src="https://open.spotify.com/embed/playlist/4X2PuhqDZZuzDJm9wvnRRi?utm_source=oembed" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture;"></iframe>
+          </div>
+        </td>
+      </tr>
       <!-- Додайте інші плейлисти за потребою -->
     </tbody>
   </table>
 </section>
 
 <script>
-  // Отримати посилання на iframe
-  const playlist1 = document.getElementById("playlist1");
-  const playlist2 = document.getElementById("playlist2");
+  // Отримати всі плейлисти
+  const playlists = document.querySelectorAll('iframe');
 
-  // Додати обробник подій для другого плейлисту
-  playlist2.addEventListener("load", () => {
-    // Зупинити відтворення першого плейлисту
-    playlist1.contentWindow.postMessage('{"method":"pause"}', 'https://open.spotify.com');
+  // Додати обробник подій для всіх плейлистів
+  playlists.forEach((playlist, index) => {
+    playlist.addEventListener("load", () => {
+      // Зупинити відтворення інших плейлистів
+      playlists.forEach((otherPlaylist, otherIndex) => {
+        if (otherIndex !== index) {
+          otherPlaylist.contentWindow.postMessage('{"method":"pause"}', 'https://open.spotify.com');
+        }
+      });
+    });
   });
-
-  // Аналогічно, додайте обробник подій для інших плейлистів, якщо потрібно
-
 </script>
+
 
 
        <section id="favoritechannel">
