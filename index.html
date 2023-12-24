@@ -205,19 +205,21 @@ nav .channel-list a:visited {
   </table>
 </section>
 
-<script>
-  const playlists = document.querySelectorAll('.playlist');
+  <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const playlists = document.querySelectorAll('.playlist');
 
-  playlists.forEach(playlist => {
-    playlist.addEventListener('load', () => {
-      playlists.forEach(otherPlaylist => {
-        if (otherPlaylist !== playlist) {
-          otherPlaylist.contentWindow.postMessage('{"method":"pause"}', 'https://open.spotify.com');
-        }
-      });
-    });
-  });
-</script>
+            playlists.forEach(playlist => {
+                playlist.addEventListener('load', () => {
+                    playlists.forEach(otherPlaylist => {
+                        if (otherPlaylist !== playlist) {
+                            otherPlaylist.contentWindow.postMessage('{"method":"pause"}', 'https://open.spotify.com');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 
 
        <section id="favoritechannel">
