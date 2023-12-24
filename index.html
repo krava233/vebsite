@@ -162,6 +162,15 @@ footer p {
   width: 100%;
   height: 100%;
 } 
+         #programming-image,
+        #radio-technology-image,
+        #computer-technology-image {
+            width: 100%; /* Забезпечити адаптивність для ширини */
+            max-width: 600px; /* Максимальна ширина зображення */
+            margin: 20px 0; /* Відступи навколо зображень */
+            border: 2px solid #333; /* Рамка навколо зображень */
+            border-radius: 10px; /* Круглі кути для рамки */
+        }
     </style>
     <title>Моя Інформаційна Сторінка</title>
 </head>
@@ -191,8 +200,25 @@ footer p {
         <h2>Мої інтереси</h2>
         <ul>
             <li>Програмування</li>
+             <section id="programming">
+        <h2>Програмування</h2>
+        <img id="programming-image" src="https://example.com/programming.jpg" alt="Фото на тему Програмування">
+        <p>Тут може бути текст або опис на тему програмування.</p>
+    </section>
+            
             <li>Радіотехніка</li>
+             <section id="radio-technology">
+        <h2>Радіотехніка</h2>
+        <img id="radio-technology-image" src="https://example.com/radio_technology.jpg" alt="Фото на тему Радіотехніка">
+        <p>Тут може бути текст або опис на тему радіотехніки.</p>
+    </section>
+            
             <li>Комп'ютерні технології</li>
+            <section id="computer-technology">
+        <h2>Комп'ютерні технології</h2>
+        <img id="computer-technology-image" src="https://example.com/computer_technology.jpg" alt="Фото на тему Комп'ютерні технології">
+        <p>Тут може бути текст або опис на тему комп'ютерних технологій.</p>
+    </section>
         </ul>
     </section>
     
