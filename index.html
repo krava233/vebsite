@@ -111,21 +111,20 @@ nav .channel-list a {
 nav .channel-list a:visited {
     color: white;
 }
-    body {
+       body {
       margin: 0;
       padding: 0;
-      /* Це забезпечить виправлення висоти сторінки */
+      position: relative;
       min-height: 100vh;
     }
 
     .content {
-      /* Додайте власні стилі для вашого вмісту */
       padding: 20px;
     }
 
     .social-icons {
-      position: fixed;
-      bottom: 0;
+      position: absolute;
+      bottom: 20px; /* Змініть це значення відповідно до ваших потреб */
       left: 50%;
       transform: translateX(-50%);
       display: flex;
@@ -139,7 +138,7 @@ nav .channel-list a:visited {
     }
 
     .social-icons img {
-      width: 40px; /* Розмір значка */
+      width: 40px;
       height: auto;
       border-radius: 50%;
     }
