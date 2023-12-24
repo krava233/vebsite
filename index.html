@@ -1,11 +1,13 @@
-<html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap">
-   
- <style>
 
+    <style>
         /* Ваші стилі CSS тут */
         body {
             font-family: 'Roboto', sans-serif;
@@ -13,13 +15,18 @@
             padding: 0;
             background-color: #f4f4f4;
         }
-section {
-            background-color: rgba(255, 255, 255, 0.8); /* Прозорий білий фон */
+
+        section {
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Прозорий білий фон */
             padding: 20px;
             margin: 20px;
-            border-radius: 70px; /* Опціонально: закруглені кути */
-            overflow: hidden; /* Забезпечення правильного закруглення кутів */
-       }
+            border-radius: 70px;
+            /* Опціонально: закруглені кути */
+            overflow: hidden;
+            /* Забезпечення правильного закруглення кутів */
+        }
+
         header {
             background-color: #333;
             color: #fff;
@@ -42,11 +49,14 @@ section {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
-            border-radius: 10px; /* Закруглені кути */
-            overflow: hidden; /* Забезпечення правильного закруглення кутів */
+            border-radius: 10px;
+            /* Закруглені кути */
+            overflow: hidden;
+            /* Забезпечення правильного закруглення кутів */
         }
 
-        table.favorite-table th, table.favorite-table td {
+        table.favorite-table th,
+        table.favorite-table td {
             border: 1px solid #ddd;
             padding: 10px;
             text-align: center;
@@ -59,67 +69,55 @@ section {
 
         table.favorite-table tbody tr:nth-child(even) {
             background-color: #f2f2f2;
-  
         }
- /* Стилі для блоку фону */
+
+        /* Стилі для блоку фону */
         .background-block {
-            background-image: url('https://source.unsplash.com/random'); /* Замініть 'шлях_до_фотографії.jpg' на шлях до вашої фотографії */
+            background-image: url('https://source.unsplash.com/random');
+            /* Замініть 'шлях_до_фотографії.jpg' на шлях до вашої фотографії */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            height: 100vh; /* Забезпечте повну висоту вікна */
+            height: 100vh;
+            /* Забезпечте повну висоту вікна */
             width: 100%;
             position: fixed;
             top: 0;
             left: 0;
-            z-index: -1; /* Розміщення блоку за контентом */
+            z-index: -1;
+            /* Розміщення блоку за контентом */
         }
-/* Стилі для фото */
-#about img {
-    display: block;
-    margin: auto;
-    border: 2px solid #333;
-    border-radius: 10px; /* Задайте радіус заокруглення, який вам подобається */
-}
- :root {
-      --link-color-light: black; /* Колір для світлої теми */
-      --link-color-dark: white; /* Колір для темної теми */
-    }
 
-    /* Селектор для гіперпосилань на світлій темі */
-    @media (prefers-color-scheme: light) {
-      a:link {
-        color: var(--link-color-dark);
-      }
-    }
+        /* Стилі для фото */
+        #about img {
+            display: block;
+            margin: auto;
+            border: 2px solid #333;
+            border-radius: 10px;
+            /* Задайте радіус заокруглення, який вам подобається */
+        }
 
-    /* Селектор для гіперпосилань на темній темі */
-    @media (prefers-color-scheme: dark) {
-      a:link {
-        color: var(--link-color-lightdark);
-      }
-    }
+        :root {
+            --link-color-light: black;
+            /* Колір для світлої теми */
+            --link-color-dark: white;
+            /* Колір для темної теми */
+        }
 
-    /* Селектор для відвіданих гіперпосилань (світла тема) */
-    @media (prefers-color-scheme: light) {
-      a:visited {
-        color: var(--link-color-dark);
-      }
-    }
+        /* Селектор для гіперпосилань в блоку nav */
+        nav a {
+            color: var(--link-color-dark);
+        }
 
-    /* Селектор для відвіданих гіперпосилань (темна тема) */
-    @media (prefers-color-scheme: dark) {
-      a:visited {
-        color: var(--link-color-light);
-      }
-    }
-       /* Специфічний блок з іншим коліром гіперпосилань */
-    .special-block a {
-      color: light; /* Колір гіперпосилань в специфічному блоку */
-    }
+        /* Селектор для відвіданих гіперпосилань в блоку nav */
+        nav a:visited {
+            color: var(--link-color-dark);
+        }
     </style>
     <title>Моя Інформаційна Сторінка</title>
-<style type="text/css" id="operaUserStyle"></style></head>
+    <style type="text/css" id="operaUserStyle"></style>
+</head>
+
 <body>
     <header>
         <h1>Вітаю на моїй інформаційній сторінці!</h1>
@@ -132,6 +130,7 @@ section {
             </ul>
         </nav>
     </header>
+
 
     <section id="about" style="text-align: center;">
         <h2>Про мене</h2>
