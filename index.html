@@ -1,0 +1,166 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap">
+   
+ <style>
+
+        /* Ваші стилі CSS тут */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+section {
+            background-color: rgba(255, 255, 255, 0.8); /* Прозорий білий фон */
+            padding: 20px;
+            margin: 20px;
+            border-radius: 70px; /* Опціонально: закруглені кути */
+            overflow: hidden; /* Забезпечення правильного закруглення кутів */
+       }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Додайте інші стилі тут */
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+        }
+
+        /* Стилі для таблиці та її елементів */
+        table.favorite-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border-radius: 10px; /* Закруглені кути */
+            overflow: hidden; /* Забезпечення правильного закруглення кутів */
+        }
+
+        table.favorite-table th, table.favorite-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table.favorite-table th {
+            background-color: #333;
+            color: white;
+        }
+
+        table.favorite-table tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+  
+        }
+ /* Стилі для блоку фону */
+        .background-block {
+            background-image: url('https://source.unsplash.com/random'); /* Замініть 'шлях_до_фотографії.jpg' на шлях до вашої фотографії */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh; /* Забезпечте повну висоту вікна */
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Розміщення блоку за контентом */
+        }
+/* Стилі для фото */
+#about img {
+    display: block;
+    margin: auto;
+    border: 2px solid #333;
+    border-radius: 10px; /* Задайте радіус заокруглення, який вам подобається */
+}
+    </style>
+    <title>Моя Інформаційна Сторінка</title>
+<style type="text/css" id="operaUserStyle"></style></head>
+<body>
+    <header>
+        <h1>Вітаю на моїй інформаційній сторінці!</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">Про мене</a></li>
+                <li><a href="#interests">Мої інтереси</a></li>
+                <li><a href="#favorite">Улюблені музикальні групи</a></li>
+                <li><a href="#favoritechannel">Улюблені YouTube-канали</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" style="text-align: center;">
+        <h2>Про мене</h2>
+        <img src="https://i.ibb.co/9NqDqPT/IMG-20231210-201212-255.jpg" alt="Моє фото" width="180" height="200" style="display: block; margin: auto;border: 2px solid #333;">
+        <p>Привіт, мене звати Кравець Вадим Олексійович. Я студент групи ЕМСА-23мс Вінницького Національного Технічного університету.</p>
+    </section>
+
+    <section id="interests">
+        <h2>Мої інтереси</h2>
+        <ul>
+            <li>Програмування</li>
+            <li>Радіотехніка</li>
+            <li>Комп'ютерні технології</li>
+        </ul>
+    </section>
+
+    <section id="favorite">
+        <h2>Улюблені музикальні групи</h2>
+        <table class="favorite-table">
+            <tbody><tr>
+                <th>Назва</th>
+                <th>Рік випуску</th>
+            </tr>
+            <tr>
+                <td>Back in Black</td>
+                <td>1980</td>
+            </tr>
+            <tr>
+                <td>Highway to Hell</td>
+                <td>1979</td>
+            </tr>
+            <!-- Додайте інші альбоми за потребою -->
+        </tbody></table>
+    </section>
+
+    <section id="favoritechannel">
+        <h2>Улюблені YouTube канали</h2>
+        <ul>
+            <li><a href="http://www.youtube.com/@user-qi2kd9nz7p" target="_blank">Мошноріз Микола Миколайович</a></li>
+            <li><a href="http://www.youtube.com/@AlexGyverShow" target="_blank">AlexGyver</a></li>
+            <li><a href="http://www.youtube.com/@vanzai" target="_blank">vanzai</a></li>
+            <li><a href="http://www.youtube.com/@RDeni" target="_blank">RDeni</a></li>
+
+        <!-- Додайте інші канали за потребою -->
+    </ul>
+    </section>
+
+    <footer>
+        <p>© 2023 Моя Інформаційна Сторінка</p>
+    </footer>
+
+    <!-- AJAX-запит для отримання вмісту текстового файлу -->
+    <div id="text-container"></div>
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("text-container").innerHTML = "<pre>" + this.responseText + "</pre>";
+            }
+        };
+        xhr.open("GET", "C:\Users\Вадим\Мой диск\HTML storinka\1.html.txt", true);
+        xhr.send();
+    </script>
+
+    <div class="background-block"></div>
+
+
+</body></html>
