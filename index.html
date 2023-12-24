@@ -156,17 +156,23 @@
         </tbody></table>
     </section>
 
-    <section id="favoritechannel">
+       <section id="favoritechannel">
         <h2>Улюблені YouTube канали</h2>
-          <style type="text/css" id="operaUserStyle"></style>
+        <style type="text/css">
+            /* Стилі для гіперпосилань в блоку #favoritechannel (світла тема) */
+            @media (prefers-color-scheme: light) {
+                #favoritechannel a {
+                    color: black; /* Змініть на бажаний колір тексту для світлої теми */
+                }
+            }
+        </style>
         <ul class="channel-list">
             <li><a href="http://www.youtube.com/@user-qi2kd9nz7p" target="_blank">Мошноріз Микола Миколайович</a></li>
             <li><a href="http://www.youtube.com/@AlexGyverShow" target="_blank">AlexGyver</a></li>
             <li><a href="http://www.youtube.com/@vanzai" target="_blank">vanzai</a></li>
             <li><a href="http://www.youtube.com/@RDeni" target="_blank">RDeni</a></li>
-
-        <!-- Додайте інші канали за потребою -->
-    </ul>
+            <!-- Додайте інші канали за потребою -->
+        </ul>
     </section>
 
     <footer>
