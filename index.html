@@ -113,6 +113,18 @@
         nav a:visited {
             color: var(--link-color-dark);
         }
+      /* Стилі для гіперпосилань в блоку favoritechannel */
+#favoritechannel a {
+    color: var(--link-color-light); /* Загальний колір гіперпосилань (світла тема) */
+}
+
+/* Стилі для гіперпосилань в блоку favoritechannel (темна тема) */
+@media (prefers-color-scheme: dark) {
+    #favoritechannel a {
+        color: var(--link-color-dark); /* Колір гіперпосилань на темній темі */
+    }
+}
+
     </style>
     <title>Моя Інформаційна Сторінка</title>
     <style type="text/css" id="operaUserStyle"></style>
@@ -168,7 +180,7 @@
 
     <section id="favoritechannel">
         <h2>Улюблені YouTube канали</h2>
-        <ul>
+        <ul class="channel-list">
             <li><a href="http://www.youtube.com/@user-qi2kd9nz7p" target="_blank">Мошноріз Микола Миколайович</a></li>
             <li><a href="http://www.youtube.com/@AlexGyverShow" target="_blank">AlexGyver</a></li>
             <li><a href="http://www.youtube.com/@vanzai" target="_blank">vanzai</a></li>
